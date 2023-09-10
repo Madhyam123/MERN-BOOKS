@@ -27,10 +27,10 @@ app.get('/', (request, response) => {
 });
 
 app.use('/books', booksRoute);
-app.use(express.static(path.join(__dirname,'./Books-Store-MERN-Stack./frontend/dist')))
-app.get("*",function(req,res){
-  res.sendFile(path.join(__dirname,"./Books-Store-MERN-Stack./frontend/dist/index.html"))
-});
+// app.use(express.static(path.join(__dirname,'./Books-Store-MERN-Stack./frontend/dist')))
+// app.get("*",function(req,res){
+//   res.sendFile(path.join(__dirname,"./Books-Store-MERN-Stack./frontend/dist/index.html"))
+// });
 mongoose
   .connect(mongoDBURL)
   .then(() => {
